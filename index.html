@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genetic Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Genetic Disorder Prediction Tool</h1>
+    </header>
+    <main>
+        <section id="pedigree-builder">
+            <h2>Pedigree Builder</h2>
+            <div id="canvasContainer">
+                <canvas id="pedigreeCanvas" width="800" height="400"></canvas>
+            </div>
+            <button onclick="addMember()">Add Member</button>
+            <button onclick="savePedigree()">Save Pedigree</button>
+            <button onclick="loadPedigree()">Load Pedigree</button>
+        </section>
+        <section id="risk-calculator">
+            <h2>Genetic Risk Calculator</h2>
+            <form id="riskForm">
+                <label>Parent 1 Genotype:</label>
+                <input type="text" id="parent1" required>
+                <label>Parent 2 Genotype:</label>
+                <input type="text" id="parent2" required>
+                <button type="submit">Calculate Risk</button>
+            </form>
+            <p id="riskResult"></p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
